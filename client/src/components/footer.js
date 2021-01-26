@@ -8,7 +8,7 @@ import { colors, ApolloIcon } from '../styles';
 const Footer = ({ children }) => {
   return (
     <FooterContainer>
-      2020 ©{' '}
+      2021 ©{' '}
       <LogoContainer>
         <ApolloIcon width="100px" height="40px" />
       </LogoContainer>

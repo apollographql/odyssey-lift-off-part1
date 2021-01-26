@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout } from '../components';
 
 /**
- * Tacks Page is Catstonauts home page.
+ * Tacks Page is Catstronauts home page.
  * We display a grid of tracks fetched with useQuery with the TRACKS query
  */
 const Tracks = () => {
