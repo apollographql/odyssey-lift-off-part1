@@ -8,7 +8,7 @@ import { humanReadableTimeFromSeconds } from '../utils/helpers';
  * for each track populating the tracks grid homepage.
  */
 const TrackCard = ({ track }) => {
-  const { title, thumbnail, author, length } = track;
+  const { title, thumbnail, author, length, modulesCount } = track;
 
   return (
     <CardContainer>
@@ -23,7 +23,7 @@ const TrackCard = ({ track }) => {
             <AuthorAndTrack>
               <AuthorName>{author.name}</AuthorName>
               <TrackLength>
-                {track.modulesCount} modules -{' '}
+                {modulesCount} modules -{' '}
                 {humanReadableTimeFromSeconds(length)}
               </TrackLength>
             </AuthorAndTrack>
