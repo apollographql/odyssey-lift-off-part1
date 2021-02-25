@@ -33,7 +33,7 @@ const Header = ({ children }) => {
 
 export default Header;
 
-/** Header styled compoenents */
+/** Header styled components */
 const HeaderBar = styled.div({
   display: 'flex',
   flexDirection: 'row',
