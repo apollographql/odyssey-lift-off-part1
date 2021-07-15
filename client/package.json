@@ -4,12 +4,10 @@
   "private": true,
   "description": "front-end demo app for Apollo's lift-off course",
   "dependencies": {
-    "@apollo/client": "^3.3.6",
     "@apollo/space-kit": "^7.11.0",
     "@emotion/core": "^10.0.34",
     "@emotion/styled": "^10.0.27",
     "@reach/router": "^1.3.4",
-    "graphql": "^15.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-emotion": "^10.0.0",
