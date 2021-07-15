@@ -1,4 +1,5 @@
-const { ApolloServer, MockList } = require('apollo-server');
+const { ApolloServer } = require('apollo-server');
+const { MockList } = require('@graphql-tools/mock');
 const typeDefs = require('./schema');
 
 const mocks = {
