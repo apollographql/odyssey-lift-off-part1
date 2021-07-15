@@ -5,17 +5,19 @@
   "description": "front-end demo app for Apollo's lift-off course",
   "dependencies": {
     "@apollo/client": "^3.3.6",
-    "@apollo/space-kit": "^7.11.0",
-    "@emotion/core": "^10.0.34",
+    "@apollo/space-kit": "^7.21.0",
+    "@emotion/cache": "^11.4.0",
+    "@emotion/core": "^10.1.1",
     "@emotion/styled": "^10.0.27",
     "@reach/router": "^1.3.4",
+    "framer-motion": "^4.1.17",
     "graphql": "^15.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-emotion": "^10.0.0",
     "react-markdown": "^6.0.2",
     "react-player": "^2.6.0",
-    "react-scripts": "^4.0.1"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
