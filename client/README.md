@@ -1,4 +1,3 @@
-# Catstronauts (client)
+# Catstronauts - client
 
-Apollo's lift-off course companion app (completed)
-[Live Demo App](https://lift-off-client-demo.netlify.app/)
+The starting point of the `client` code for Odyssey Lift-off I course.
