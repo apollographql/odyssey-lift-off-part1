@@ -1,25 +1,34 @@
-# Catstronauts
+# Odyssey Lift-off I: Basics
 
-Apollo's Lift-off course companion app (completed)
+Welcome to the companion app of Odyssey Lift-off I! You can [find the course lessons and instructions on Odyssey](https://odyssey.apollographql.com/lift-off-part1), Apollo's learning platform.
 
-[Live Demo App](https://lift-off-client-demo.netlify.app/)
+You can [preview the completed demo app here](https://lift-off-client-demo.netlify.app/).
 
-[Course Walk-through on Odyssey](https://odyssey.apollographql.com/lift-off-part1)
+## How to use this repo
 
-## Run the project
+The course will walk you step by step on how to implement the features you see in the demo app. This codebase is the starting point of your journey!
 
-Catstronauts full-stack app holds two main folders `server` and `client`.
+There are 2 main folders:
 
-### server
+- `server`: The starting point of our GraphQL server.
+- `client`: The starting point of our React application.
 
-- install packages `cd server && npm install`
-- start server `npm start`
+To get started:
 
-The GraphQL server pulls data from a REST API.
+1. Navigate to the `server` folder.
+1. Run `npm install`.
+1. Run `npm start`.
 
-### client
+This will start the GraphQL API server.
 
-From another terminal window:
+In another Terminal window,
 
-- install packages `cd client && npm install`
-- start React app `npm start`
+1. Navigate to the `client` folder.
+1. Run `npm install`.
+1. Run `npm start`.
+
+This will open up `localhost:3000` in your web browser.
+
+## Getting Help
+
+For any issues or problems concerning the course content, please refer to the [Odyssey topic in our community forums](https://community.apollographql.com/tags/c/help/6/odyssey).
