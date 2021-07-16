@@ -1,10 +1,9 @@
 const { ApolloServer } = require('apollo-server');
-const { MockList } = require('@graphql-tools/mock');
 const typeDefs = require('./schema');
 
 const mocks = {
   Query: () => ({
-    tracksForHome: () => new MockList([6, 9]),
+    tracksForHome: () => [...new Array(9)],
   }),
   Track: () => ({
     id: () => 'track_01',
