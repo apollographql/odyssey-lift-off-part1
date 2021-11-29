@@ -42,8 +42,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "apollo": "^2.30.2"
+    "@testing-library/user-event": "^7.1.2"
   },
   "main": "src/index.js",
   "author": "Raphael Terrier @R4ph-t",
