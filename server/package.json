@@ -6,7 +6,14 @@
   "scripts": {
     "start": "nodemon src/index"
   },
-  "dependencies": {},
+  "dependencies": {
+    "apollo-datasource-rest": "^3.5.3",
+    "apollo-server-core": "^3.7.0",
+    "apollo-server-express": "^3.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "graphql": "^16.5.0"
+  },
   "devDependencies": {
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.4"
