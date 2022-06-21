@@ -4,7 +4,7 @@ import TrackCard from '../containers/track-card';
 import { Layout, QueryResult } from '../components';
 
 /** TRACKS gql query to retreive all tracks */
-export const TRACKS = gql`
+const TRACKS = gql`
   query getTracks {
     tracksForHome {
       id
