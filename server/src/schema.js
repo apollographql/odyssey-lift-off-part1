@@ -1,6 +1,10 @@
 import { gql } from "apollo-server";
 
 const typeDefs = gql`
+  type Query {
+    "Get tracks array for homepage grid."
+    tracksForHome: [Track!]!
+  }
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
     id: ID!
@@ -22,12 +26,7 @@ const typeDefs = gql`
     "Author first and last name"
     name: String!
     "Author's profile picture url"
-    photo: string
-  }
-
-  type Query {
-    "Get tracks array for homepage grid."
-    tracksForHome: [Track!]!
+    photo: String
   }
 `;
 
