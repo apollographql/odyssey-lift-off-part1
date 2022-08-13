@@ -21,7 +21,7 @@
     "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -50,3 +50,4 @@
   "author": "Raphael Terrier @R4ph-t",
   "license": "MIT"
 }
+
