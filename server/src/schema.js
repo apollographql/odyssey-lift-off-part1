@@ -13,7 +13,7 @@ const typeDefs = gql`
     title: String!
     author: Author!
     thumbnail: String
-    lenght: Int
+    length: Int
     modulesCount: Int
   }
 
