@@ -1,7 +1,7 @@
 import {ApolloServer} from 'apollo-server';
 import typeDefs from './schema.js';
 import resolvers from './resolvers.js'
-import TrackApi from './datasources/track-api.js'
+import TrackAPI from './datasources/track-api.js'
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -12,7 +12,7 @@ const server = new ApolloServer({
   resolvers,
   dataSources: () => {
     return {
-      trackApi: new TrackApi()
+      trackApi: new TrackAPI()
     }
   }
 });
