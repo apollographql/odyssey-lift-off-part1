@@ -12,7 +12,7 @@ const resolvers = {
     Mutation: {
         incrementTrackViews: async (_, { id }, { dataSources }) => {
             try {
-                const track = await dataSources.trackAPI.incrementTrackViews(id);
+                const track = await dataSources.trackApi.incrementTrackViews(id);
                 return {
                     code: 200,
                     success: true,
