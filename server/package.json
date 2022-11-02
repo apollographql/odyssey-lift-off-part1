@@ -8,8 +8,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4"
+    "dotenv": "^8.6.0",
+    "nodemon": "^2.0.20"
   },
   "author": "Raphael Terrier @R4ph-t",
   "license": "MIT",
