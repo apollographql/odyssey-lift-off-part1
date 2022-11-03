@@ -88,17 +88,16 @@ jobs:
           fi
       - name: 'Open pull request'
         run: |
-          gh pr status
+          gh pr status --json number,state
           echo "*********"
 
-          # Check if a pull request already exists for the current branch (BRANCH_NAME).
-          CHECK_FOR_NO_PR=$(gh pr status | grep "There is no pull request associated with \[$BRANCH_NAME\]" | wc -l )
-          # Strip the spaces from CHECK_FOR_NO_PR.
-          # Will be set to 1 if no PR is found for the current branch, or 0 if a PR exists.
-          NO_PR_EXISTS=${CHECK_FOR_NO_PR// }
+          # Check if an open pull request already exists for the current branch.
+          # Will be set to "OPEN" if PR is found for the current branch.
+          # Otherwise, may be set to "CLOSED", "MERGED", or empty string (if no PRs exist for current branch yet).
+          CURRENT_BRANCH_PR_STATE=$(gh pr status --json number,state --jq ".currentBranch?.state")
 
           # If there isn't a PR for this branch yet, create one.
-          if [ $NO_PR_EXISTS = 1 ]
+          if [ "$CURRENT_BRANCH_PR_STATE" != "OPEN" ]
           then
             echo "Creating a new PR using branch: ${BRANCH_NAME}"
             gh pr create --fill
