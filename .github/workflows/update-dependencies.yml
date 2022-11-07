@@ -88,6 +88,22 @@ jobs:
           fi
       - name: 'Open pull request'
         run: |
+          git branch --remotes
+          echo "*********"
+
+          # Check if a remote branch exists with the specified BRANCH_NAME.
+          CHECK_BRANCH_OUTPUT=$(git branch --remotes | grep "origin/${BRANCH_NAME}" | wc -l )
+          # Strip the spaces from CHECK_BRANCHES_OUTPUT.
+          # Will be set to 1 if a matching branch is found, or 0 otherwise.
+          DOES_BRANCH_EXIST=${CHECK_BRANCH_OUTPUT// }
+
+          # If there isn't a remote branch, we can't create a PR, so return early.
+          if [ $DOES_BRANCH_EXIST != 1 ]
+          then
+            echo "No remote branch $BRANCH_NAME. Exiting without opening a pull request."
+            return
+          fi
+
           gh pr status --json number,state
           echo "*********"
 
