@@ -1,0 +1,120 @@
+# What to call this GitHub Action workflow in the GitHub browser UI
+name: Update Dependencies
+
+# Set up environment variables for this runner
+env:
+  # For using `gh`, the GitHub CLI (to create a PR):
+  GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  # The branch to commit updated dependency versions to
+  BRANCH_NAME: update-deps
+
+# When to run this GitHub Action
+on:
+  # Run when changes pushed to main branch (Uncomment for debugging)
+  # push:
+  #   branches:
+  #     - main
+  schedule:
+    # Run every day at midnight UTC
+    # Note: During peak load times, GitHub may delay this time
+    - cron: '0 0 * * *'
+
+jobs:
+  update_deps: # job name
+    # Only run this GitHub Action on the original repo, not on forks
+    if: github.repository_owner == 'apollographql'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          # Fetch all branches when checking out the repo
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: 'Check out branch'
+        run: |
+          git branch --remotes
+          echo "*********"
+
+          # Check if a branch already exists with the specified BRANCH_NAME.
+          CHECK_BRANCH_OUTPUT=$(git branch --remotes | grep "origin/${BRANCH_NAME}" | wc -l )
+          # Strip the spaces from CHECK_BRANCHES_OUTPUT.
+          # Will be set to 1 if a matching branch is found, or 0 otherwise.
+          DOES_BRANCH_EXIST=${CHECK_BRANCH_OUTPUT// }
+
+          # If it does, check it out
+          if [ $DOES_BRANCH_EXIST = 1 ]
+          then
+            echo "Checking out existing branch: ${BRANCH_NAME}"
+            git checkout $BRANCH_NAME
+          # If it doesn't, check out a new branch with that name
+          else
+            echo "Checking out a new branch: ${BRANCH_NAME}"
+            git checkout -b $BRANCH_NAME
+          fi
+      - name: 'Install dependencies'
+        run: |
+          cd client && npm i && cd ..
+          cd server && npm i && cd ..
+          cd final/client && npm i && cd ../..
+          cd final/server && npm i && cd ../..
+      - name: 'Update dependencies'
+        run: |
+          cd client && npm update && cd ..
+          cd server && npm update && cd ..
+          cd final/client && npm update && cd ../..
+          cd final/server && npm update && cd ../..
+      - name: 'Commit & push changes'
+        run: |
+          git status
+          echo "*********"
+
+          # Check if there are unstaged changes to commit
+          CHECK_FOR_UNSTAGED_CHANGES=$(git status | grep "Changes not staged for commit:" | wc -l)
+          # Strip the spaces from CHECK_FOR_UNSTAGED_CHANGES.
+          # Will be set to 1 if there are changes to be commited, or 0 otherwise.
+          UNSTAGED_CHANGES_EXIST=${CHECK_FOR_UNSTAGED_CHANGES// }
+
+          if [ $UNSTAGED_CHANGES_EXIST = 1 ]
+          then
+            # Commit and push changes
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add .
+            git commit -m "chore: updated dependencies"
+            git push --set-upstream origin $BRANCH_NAME
+            echo "Pushed changes to remote branch $BRANCH_NAME"
+          fi
+      - name: 'Open pull request'
+        run: |
+          git branch --remotes
+          echo "*********"
+
+          # Check if a remote branch exists with the specified BRANCH_NAME.
+          CHECK_BRANCH_OUTPUT=$(git branch --remotes | grep "origin/${BRANCH_NAME}" | wc -l )
+          # Strip the spaces from CHECK_BRANCHES_OUTPUT.
+          # Will be set to 1 if a matching branch is found, or 0 otherwise.
+          DOES_BRANCH_EXIST=${CHECK_BRANCH_OUTPUT// }
+
+          # If there isn't a remote branch, we can't create a PR, so return early.
+          if [ $DOES_BRANCH_EXIST != 1 ]
+          then
+            echo "No remote branch $BRANCH_NAME. Exiting without opening a pull request."
+            return
+          fi
+
+          gh pr status --json number,state
+          echo "*********"
+
+          # Check if an open pull request already exists for the current branch.
+          # Will be set to "OPEN" if PR is found for the current branch.
+          # Otherwise, may be set to "CLOSED", "MERGED", or empty string (if no PRs exist for current branch yet).
+          CURRENT_BRANCH_PR_STATE=$(gh pr status --json number,state --jq ".currentBranch?.state")
+
+          # If there isn't a PR for this branch yet, create one.
+          if [ "$CURRENT_BRANCH_PR_STATE" != "OPEN" ]
+          then
+            echo "Creating a new PR using branch: ${BRANCH_NAME}"
+            gh pr create --fill
+          fi
