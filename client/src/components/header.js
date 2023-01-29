@@ -1,7 +1,7 @@
 import React from 'react';
 import { colors, widths } from '../styles';
 import styled from '@emotion/styled';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 import logo from '../assets/space_cat_logo.png';
 
 /**
