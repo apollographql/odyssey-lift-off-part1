@@ -11,7 +11,7 @@
     "dotenv": "^8.6.0",
     "nodemon": "^2.0.20"
   },
-  "author": "Raphael Terrier @R4ph-t",
+  "author": "Justice Ellis",
   "license": "MIT",
   "private": true
 }
