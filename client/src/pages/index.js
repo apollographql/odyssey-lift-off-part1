@@ -1,12 +1,14 @@
-import React, { Fragment } from 'react';
-import { Router } from '@reach/router';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 /** importing our pages */
 import Tracks from './tracks';
 
 export default function Pages() {
   return (
-    <Router primary={false} component={Fragment}>
-      <Tracks path="/" />
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Tracks />} path="/" />
+      </Routes>
+    </BrowserRouter>
   );
 }
