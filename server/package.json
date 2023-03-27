@@ -6,7 +6,13 @@
   "scripts": {
     "start": "nodemon src/index"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@apollo/server": "^4.5.0",
+    "@graphql-tools/mock": "^8.7.19",
+    "@graphql-tools/schema": "^9.0.17",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6"
+  },
   "devDependencies": {
     "dotenv": "^8.6.0",
     "nodemon": "^2.0.20"

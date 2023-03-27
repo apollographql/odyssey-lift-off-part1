@@ -4,28 +4,24 @@ import { colors, mq } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
 
 /**
- * Track Card component renders basic info in a card format
+ * Quote Card component renders basic info in a card format
  * for each track populating the tracks grid homepage.
  */
-const TrackCard = ({ track }) => {
-  const { title, thumbnail, author, length, modulesCount } = track;
+const QuoteCard = ({ quote }) => {
+  const { quotetext, source, author } = quote;
 
   return (
     <CardContainer>
       <CardContent>
-        <CardImageContainer>
+        {/* <CardImageContainer>
           <CardImage src={thumbnail} alt={title} />
-        </CardImageContainer>
+        </CardImageContainer> */}
         <CardBody>
-          <CardTitle>{title || ''}</CardTitle>
+          <CardTitle>{quotetext || ''}</CardTitle>
           <CardFooter>
             <AuthorImage src={author.photo} />
             <AuthorAndTrack>
               <AuthorName>{author.name}</AuthorName>
-              <TrackLength>
-                {modulesCount} modules -{' '}
-                {humanReadableTimeFromSeconds(length)}
-              </TrackLength>
             </AuthorAndTrack>
           </CardFooter>
         </CardBody>
@@ -34,7 +30,7 @@ const TrackCard = ({ track }) => {
   );
 };
 
-export default TrackCard;
+export default QuoteCard;
 
 /** Track Card styled components */
 const CardContainer = styled.div({
