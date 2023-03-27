@@ -12,7 +12,7 @@ const mocks = {
       }),
     Quote: () => ({
       id: () => "quote_01",
-      quote: () => "42",
+      quotetext: () => "“The Ultimate Answer to Life, The Universe and Everything is...42!”",
       source: () => "Hitchhiker\'s Guide to the Galaxy",
       author: () => {
         return {

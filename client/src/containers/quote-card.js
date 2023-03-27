@@ -17,7 +17,8 @@ const QuoteCard = ({ quote }) => {
           <CardImage src={thumbnail} alt={title} />
         </CardImageContainer> */}
         <CardBody>
-          <CardTitle>{quotetext || ''}</CardTitle>
+          <CardTitle>{source || ''}</CardTitle>
+          <QuoteText>{quotetext}</QuoteText>
           <CardFooter>
             <AuthorImage src={author.photo} />
             <AuthorAndTrack>
@@ -130,6 +131,13 @@ const AuthorAndTrack = styled.div({
 const AuthorName = styled.div({
   lineHeight: '1em',
   fontSize: '1.1em',
+});
+
+const QuoteText = styled.div({
+  lineHeight: '1em',
+  fontSize: '2em',
+  padding: 38,
+  
 });
 
 const TrackLength = styled.div({
