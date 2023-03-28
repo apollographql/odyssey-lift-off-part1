@@ -1,4 +1,6 @@
-# Odyssey Lift-off I: Basics
+# A quote display system based on....Odyssey Lift-off I: Basics
+
+In this example, the schema and queries from teh Odyssey lift off are modified to share quotes instead of tracks..
 
 Welcome to the companion app of Odyssey Lift-off I! You can [find the course lessons and instructions on Odyssey](https://odyssey.apollographql.com/lift-off-part1), Apollo's learning platform.
 
