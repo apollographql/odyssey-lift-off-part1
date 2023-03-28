@@ -8,7 +8,7 @@ const { makeExecutableSchema } = require("@graphql-tools/schema");
 
 const mocks = {
     Query: () => ({
-        quotesForHome: () => [...new Array(6)],
+        quotesForHome: () => [...new Array(3)],
       }),
     Quote: () => ({
       id: () => "quote_01",
@@ -22,6 +22,18 @@ const mocks = {
         };
       },
     }),
+    Quote: () => ({
+        id: () => "quote_02",
+        quotetext: () => "“We\'re all pretty bizarre. Some of us are just better at hiding it, that\'s all.”",
+        source: () => "The Breakfast Club",
+        author: () => {
+          return {
+            name: "John Hughes",
+            photo:
+              "https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTypfCEpnH7cpg-YbPuc2yTB18OtDTHWjaAOE25eNtGtTxU-wOUHKUvZkNMxOZkMBhJM8dmblNegxXylD8",
+          };
+        },
+      }),
   };
 
 async function startApolloServer() {
