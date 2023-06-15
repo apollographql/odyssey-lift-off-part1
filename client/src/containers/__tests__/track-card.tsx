@@ -1,5 +1,6 @@
 import React from 'react';
-import { renderApollo, cleanup, waitForElement } from '../../utils/test-utils';
+import { renderApollo, cleanup, wait } from '../../utils/test-utils';
+import { MockedResponse } from '@apollo/client/testing';
 import TrackCard from '../track-card';
 
 const mockTrackCardData = {
@@ -20,7 +21,7 @@ describe('Track Card', () => {
   afterEach(cleanup);
 
   it('renders track Card', async () => {
-    const mocks = [];
+    const mocks: MockedResponse<Record<string, any>>[] = [];
     const { getByText } = await renderApollo(
       <TrackCard track={mockTrackCardData} />,
       {
@@ -29,6 +30,6 @@ describe('Track Card', () => {
         addTypename: false,
       }
     );
-    await waitForElement(() => getByText(/cat-stronomy/i));
+    await wait(() => getByText(/cat-stronomy/i));
   });
 });

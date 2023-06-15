@@ -8,21 +8,25 @@ import { humanReadableTimeFromSeconds } from '../utils/helpers';
  * Module Navigation: displays a list of modules titles
  * from a track and navigates to the modules page
  */
-const ModulesNav = ({ module, track }) => {
+const ModulesNav: React.FC<{module: any, track: any}> = ({ module, track }) => {
   return (
     <ModulesNavContainer>
       <ModuleTitle>
         <h4>
-          <Link to="../..">{track.title}</Link>
+          {/* Need to comment this out until Link is placed within a Router */}
+          {/* <Link to="../.."> */}
+          {track.title}
+          {/*</Link> */}
         </h4>
       </ModuleTitle>
       <ModulesList>
-        {track.modules.map((navModule) => (
+        {track.modules.map((navModule: any) => (
           <ModuleListItem key={`module_${navModule.id}`}>
             <div>
-              <ModuleNavStyledLink
+              {/* Need to comment this out until Link is placed within a Router */}
+              {/* <ModuleNavStyledLink
                 to={`/track/${track.id}/module/${navModule.id}`}
-              >
+              > */}
                 <ModuleListItemContent isActive={navModule.id === module.id}>
                   {navModule.id === module.id ? (
                     <IconDoubleArrowRight width="14px" />
@@ -32,7 +36,7 @@ const ModulesNav = ({ module, track }) => {
                   <div>{navModule.title}</div>
                   <div>{humanReadableTimeFromSeconds(navModule.length)}</div>
                 </ModuleListItemContent>
-              </ModuleNavStyledLink>
+              {/* </ModuleNavStyledLink> */}
             </div>
           </ModuleListItem>
         ))}
@@ -98,7 +102,7 @@ const ModuleNavStyledLink = styled(Link)({
   alignItems: 'center',
 });
 
-const ModuleListItemContent = styled.div((props) => ({
+const ModuleListItemContent = styled.div((props: { isActive: boolean }) => ({
   backgroundColor: props.isActive ? colors.black.base : colors.black.light,
   color: props.isActive ? colors.silver.lighter : colors.silver.darker,
   minHeight: 80,

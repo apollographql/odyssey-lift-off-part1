@@ -4,6 +4,7 @@
   "private": true,
   "description": "front-end demo app for Apollo's lift-off course",
   "dependencies": {
+    "@apollo/client": "^3.7.15",
     "@apollo/space-kit": "^9.3.1",
     "@emotion/cache": "^11.4.0",
     "@emotion/core": "^10.1.1",
@@ -42,7 +43,13 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2"
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^29.2.6",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@types/react-router-dom": "^5.3.3",
+    "typescript": "^4.9.4"
   },
   "overrides": {
     "nth-check": "2.0.1"

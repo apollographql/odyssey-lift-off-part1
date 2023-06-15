@@ -4,14 +4,16 @@
   "description": "back-end demo app for Apollo's lift-off course",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index"
+    "compile": "tsc",
+    "start": "npm run compile && nodemon ./dist/index.js"
   },
-  "dependencies": {},
   "devDependencies": {
     "dotenv": "^8.6.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "typescript": "^5.1.3"
   },
   "author": "Raphael Terrier @R4ph-t",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "type": "module"
 }
