@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { colors, IconArrowRight, IconDoubleArrowRight } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
 
@@ -96,11 +96,11 @@ const ModuleListItem = styled.li((props) => ({
   },
 }));
 
-const ModuleNavStyledLink = styled(Link)({
-  textDecoration: 'none',
-  display: 'flex',
-  alignItems: 'center',
-});
+// const ModuleNavStyledLink = styled(Link)({
+//   textDecoration: 'none',
+//   display: 'flex',
+//   alignItems: 'center',
+// });
 
 const ModuleListItemContent = styled.div((props: { isActive: boolean }) => ({
   backgroundColor: props.isActive ? colors.black.base : colors.black.light,
