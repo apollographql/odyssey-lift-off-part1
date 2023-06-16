@@ -28,11 +28,11 @@ export default Layout;
 
 /** Layout styled components */
 const PageContainer = styled.div<LayoutProps>`
-  display: 'flex';
+  display: flex;
   justify-content: ${({ grid }) => grid ? 'center' : 'top'};
   flex-direction: ${({ grid }) => grid ? 'row' : 'column'};
-  flex-wrap: 'wrap';
-  align-self: 'center';
+  flex-wrap: wrap;
+  align-self: center;
   flex-grow: 1;
   max-width: ${({ fullWidth }) => fullWidth ? null : `${widths.regularPageWidth}px`};
   width: '100%';
