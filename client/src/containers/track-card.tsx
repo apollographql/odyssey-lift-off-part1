@@ -19,12 +19,12 @@ const TrackCard: React.FC<{ track: any }> = ({ track }) => {
         <CardBody>
           <CardTitle>{title || ''}</CardTitle>
           <CardFooter>
-            <AuthorImage src={author.photo} />
+            <AuthorImage src={author.photo || ''} />
             <AuthorAndTrack>
               <AuthorName>{author.name}</AuthorName>
               <TrackLength>
                 {modulesCount} modules -{' '}
-                {humanReadableTimeFromSeconds(length)}
+                {humanReadableTimeFromSeconds(length || 0)}
               </TrackLength>
             </AuthorAndTrack>
           </CardFooter>
