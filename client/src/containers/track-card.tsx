@@ -14,7 +14,7 @@ const TrackCard: React.FC<{ track: any }> = ({ track }) => {
     <CardContainer>
       <CardContent>
         <CardImageContainer>
-          <CardImage src={thumbnail} alt={title} />
+          <CardImage src={thumbnail || ''} alt={title} />
         </CardImageContainer>
         <CardBody>
           <CardTitle>{title || ''}</CardTitle>
