@@ -4,6 +4,7 @@
     "outDir": "dist",
     "target": "es2020",
     "moduleResolution": "node",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "module": "commonjs"
   }
 }
