@@ -16,7 +16,7 @@
     "react-emotion": "^10.0.0",
     "react-markdown": "^6.0.2",
     "react-player": "^2.6.0",
-    "react-router-dom": "^6.8.0",
+    "react-router-dom": "^6.8.0"
   },
   "scripts": {
     "test": "vitest",

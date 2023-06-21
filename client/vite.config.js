@@ -13,6 +13,10 @@ export default defineConfig(() => ({
     globals: true,
     environment: 'happy-dom',
   },
+  server: {
+    host: 'localhost',
+    port: 3000
+  },
   esbuild: {
     loader: "jsx",
     include: /src\/.*\.jsx?$/,
