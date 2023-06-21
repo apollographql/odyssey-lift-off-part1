@@ -20,6 +20,5 @@ describe('Query Result', () => {
   it('renders Error', async () => {
     const { getByText } = render(<QueryResult error={new Error('you lose')} />);
     getByText(/you lose/i);
-    console.log('log')
   });
 });
