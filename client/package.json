@@ -17,11 +17,9 @@
     "react-markdown": "^6.0.2",
     "react-player": "^2.6.0",
     "react-router-dom": "^6.8.0",
-    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "test": "vitest",
-    "eject": "react-scripts eject",
     "start": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
