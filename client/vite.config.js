@@ -23,12 +23,15 @@ export default defineConfig(() => ({
   },
   optimizeDeps: {
     esbuildOptions: {
+      loader: {
+        '.js': 'jsx',
+      },
       plugins: [
         {
           name: "load-js-files-as-jsx",
           setup(build) {
             build.onLoad({ filter: /src\/.*\.js$/ }, async (args) => ({
-              loader: "jsx",
+              loader: 'jsx',
               contents: await fs.readFile(args.path, "utf8"),
             }));
           },
@@ -37,3 +40,18 @@ export default defineConfig(() => ({
     },
   },
 }));
+
+// import { defineConfig } from 'vite';
+
+// export default defineConfig(() => ({
+//   esbuild: {
+//     loader: 'jsx',
+//   },
+//   optimizeDeps: {
+//     esbuildOptions: {
+//       loader: {
+//         '.js': 'jsx',
+//       },
+//     },
+//   },
+// }))
