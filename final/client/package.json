@@ -4,7 +4,7 @@
   "private": true,
   "description": "front-end demo app for Apollo's lift-off course",
   "dependencies": {
-    "@apollo/client": "^3.5.5",
+    "@apollo/client": "^3.7.16",
     "@apollo/space-kit": "^9.3.1",
     "@emotion/cache": "^11.4.0",
     "@emotion/core": "^10.1.1",
@@ -17,17 +17,12 @@
     "react-emotion": "^10.0.0",
     "react-markdown": "^6.0.2",
     "react-player": "^2.6.0",
-    "react-router-dom": "^6.8.0",
-    "react-scripts": "^5.0.1"
+    "react-router-dom": "^6.8.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "test": "vitest",
+    "start": "vite",
+    "build": "vite build"
   },
   "browserslist": {
     "production": [
@@ -44,7 +39,13 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2"
+    "@testing-library/user-event": "^7.1.2",
+    "@vitejs/plugin-react": "^4.0.1",
+    "@vitest/ui": "^0.32.2",
+    "happy-dom": "^9.20.3",
+    "jest": "^27.5.1",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.2"
   },
   "overrides": {
     "nth-check": "2.0.1"
