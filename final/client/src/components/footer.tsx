@@ -5,7 +5,7 @@ import { colors, ApolloIcon } from '../styles';
 /**
  * Footer is useless component to make our app look a little closer to a real website!
  */
-const Footer = ({ children }) => {
+const Footer: React.FC = () => {
   return (
     <FooterContainer>
       2021 ©{' '}

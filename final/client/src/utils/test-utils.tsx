@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { MockedProvider } from '@apollo/client/testing';
 
 const renderApollo = (
-  node,
-  { mocks, addTypename, defaultOptions, cache, resolvers, ...options }
+  node: React.ReactElement,
+  { mocks, addTypename, defaultOptions, cache, resolvers, ...options }: Pick<ComponentProps<typeof MockedProvider>, 'mocks' | 'addTypename' | 'defaultOptions' | 'cache' | 'resolvers'>
 ) => {
   return render(
     <MockedProvider
@@ -14,7 +14,6 @@ const renderApollo = (
       defaultOptions={defaultOptions}
       cache={cache}
       resolvers={resolvers}
-      removeTypename
     >
       {node}
     </MockedProvider>,
