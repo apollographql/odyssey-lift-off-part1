@@ -10,8 +10,7 @@ const config: CodegenConfig = {
         gqlTagName: "gql",
       },
     },
-  },
-  ignoreNoDocuments: true,
+  }
 };
 
 export default config;
