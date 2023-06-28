@@ -6,5 +6,6 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "module": "commonjs"
-  }
+  },
+  "include": ["src"]
 }
