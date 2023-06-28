@@ -1,3 +1,3 @@
 # Catstronauts - server
 
-The starting point of the `server` code for Odyssey Lift-off I course.
+The final state of the `server` code after finishing the Odyssey Lift-off I course.
