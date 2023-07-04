@@ -1,5 +1,5 @@
-import React from 'react';
-import { Layout } from '../components';
+import React from "react";
+import { Layout } from "../components";
 
 /**
  * Tracks Page is the Catstronauts home page.

@@ -10,7 +10,7 @@ const config: CodegenConfig = {
         gqlTagName: "gql",
       },
     },
-  }
+  },
 };
 
 export default config;

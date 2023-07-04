@@ -27,9 +27,9 @@ const TRACKS = gql(`
  * We display a grid of tracks fetched with useQuery with the TRACKS query
  */
 const Tracks = () => {
-  const { loading, error, data } = useQuery(TRACKS)
+  const { loading, error, data } = useQuery(TRACKS);
 
-   return (
+  return (
     <Layout grid>
       <QueryResult error={error} loading={loading} data={data}>
         {data?.tracksForHome?.map((track, index) => (
@@ -37,7 +37,7 @@ const Tracks = () => {
         ))}
       </QueryResult>
     </Layout>
-  )
+  );
 };
 
 export default Tracks;
