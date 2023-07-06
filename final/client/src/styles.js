@@ -17,7 +17,6 @@ export const colors = {
   secondary: SKColors.teal.base,
   accent: SKColors.pink.base,
   background: SKColors.silver.light,
-  grey: SKColors.silver.dark,
   text: SKColors.black.base,
   textSecondary: SKColors.grey.dark,
   ...SKColors,

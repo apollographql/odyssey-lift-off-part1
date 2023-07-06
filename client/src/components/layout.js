@@ -29,7 +29,7 @@ const PageContainer = styled.div((props) => ({
   flexWrap: 'wrap',
   alignSelf: 'center',
   flexGrow: 1,
-  maxWidth: props.fullWidth ? null : `${widths.regularPageWidth}px`,
+  maxWidth: props.fullWidth ? undefined : `${widths.regularPageWidth}px`,
   width: '100%',
   padding: props.fullWidth ? 0 : unit * 2,
   paddingBottom: unit * 5,

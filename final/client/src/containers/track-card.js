@@ -113,7 +113,7 @@ const CardBody = styled.div({
 
 const CardFooter = styled.div({
   display: 'flex',
-  flexDirection: 'Row',
+  flexDirection: 'row',
 });
 
 const AuthorImage = styled.img({

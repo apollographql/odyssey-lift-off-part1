@@ -9,10 +9,8 @@
     "@emotion/core": "^10.1.1",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
-    "framer-motion": "^4.1.17",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-emotion": "^10.0.0",
     "react-markdown": "^6.0.2",
     "react-player": "^2.6.0",
     "react-router-dom": "^6.8.0"
