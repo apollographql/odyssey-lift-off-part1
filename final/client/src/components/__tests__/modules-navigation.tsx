@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '../../utils/test-utils';
+import { renderWithRouter, cleanup } from '../../utils/test-utils';
 import ModuleNav from '../modules-navigation';
 
 const mockModule = {
@@ -42,6 +42,6 @@ describe('Modules Navigation View', () => {
   afterEach(cleanup);
 
   it('renders without error', () => {
-    render(<ModuleNav module={mockModule} track={mockParentTrack} />);
+    renderWithRouter(<ModuleNav module={mockModule} track={mockParentTrack} />);
   });
 });

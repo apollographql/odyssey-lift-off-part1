@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '../../utils/test-utils';
+import { renderWithRouter, cleanup } from '../../utils/test-utils';
 import TrackDetail from '../track-detail';
 
 const mockTrack = {
@@ -33,6 +33,6 @@ describe('Module Detail View', () => {
   afterEach(cleanup);
 
   it('renders without error', () => {
-    render(<TrackDetail {...mockTrack} />);
+    renderWithRouter(<TrackDetail {...mockTrack} />);
   });
 });
