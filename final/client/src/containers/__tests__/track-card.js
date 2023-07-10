@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderApollo, cleanup, waitForElement } from '../../utils/test-utils';
+import { renderApolloWithRouter, cleanup, waitForElement } from '../../utils/test-utils';
 import TrackCard from '../track-card';
 
 const mockTrackCardData = {
@@ -21,7 +21,7 @@ describe('Track Card', () => {
 
   it('renders track Card', async () => {
     const mocks = [];
-    const { getByText } = await renderApollo(
+    const { getByText } = await renderApolloWithRouter(
       <TrackCard track={mockTrackCardData} />,
       {
         mocks,

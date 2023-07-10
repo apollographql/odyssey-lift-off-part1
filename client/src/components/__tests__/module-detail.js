@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '../../utils/test-utils';
+import { renderWithRouter, cleanup } from '../../utils/test-utils';
 import ModuleDetail from '../module-detail';
 
 const mockModule = {
@@ -41,6 +41,6 @@ describe('Module Detail View', () => {
   afterEach(cleanup);
 
   it('renders without error', () => {
-    render(<ModuleDetail module={mockModule} track={mockParentTrack} />);
+    renderWithRouter(<ModuleDetail module={mockModule} track={mockParentTrack} />);
   });
 });
