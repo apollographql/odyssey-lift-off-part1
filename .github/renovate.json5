@@ -1,3 +1,45 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  // Boilerplate
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+
+  // This will group all patch- and minor-level updates into a single PR
+  // rather than generating 1 PR per dependency (which is the current default)
+  // This just helps reduce noise on the repo.
+  extends: ["group:allNonMajor"],
+
+  // Disables dependency dashboard - it doesn't do anything on
+  // repos that don't support issues
+  dependencyDashboard: false,
+
+  // Resetting to the default PR creation configuration
+  // The default config overrides this.
+  // Realized I also need to change this because you don't have issues
+  // Normally, the dependency dashboard would tell you if PRs are holding
+  // because they're waiting for tests to pass.
+  // With this set to "immediate", you'll be able to see any stuck pulls
+  prCreation: "immediate",
+
+  // Prevent automerging any lockfile mainteance
+  // there's an ongoing discussion around whether or not 
+  // we should even have lockfile maintenance on by default
+  // here: https://apollograph.slack.com/archives/C02TG9NHM/p1689259568243699
+  lockFileMaintenance: {
+    automerge: false,
+  },
+
+  packageRules: [
+    // Prevent automerging for PRs that aren't lockfile maintenance
+    {
+      matchPackagePatterns: ["*"],
+      automerge: false,
+    },
+    // Example of pinning a dependency to a specific version or range of versions
+    // There's a ton of flexibility for doing this type of thing
+    // if you're looking for other options, check out the various config options:
+    // https://docs.renovatebot.com/configuration-options/#packagerules
+    {
+      matchPackageNames: ["react"],
+      allowedVersions: "16.x",
+    },
+  ],
 }
