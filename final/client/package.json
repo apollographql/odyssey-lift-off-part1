@@ -39,14 +39,14 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@vitejs/plugin-react": "^4.0.1",
-    "@vitest/ui": "^0.32.2",
+    "@vitest/ui": "^0.33.0",
     "happy-dom": "^9.20.3",
     "jest": "^27.5.1",
-    "vite": "^4.3.9",
-    "vitest": "^0.32.2"
+    "vite": "^4.4.2",
+    "vitest": "^0.33.0"
   },
   "overrides": {
-    "nth-check": "2.0.1"
+    "nth-check": "2.1.1"
   },
   "main": "src/index.js",
   "author": "Raphael Terrier @R4ph-t",
