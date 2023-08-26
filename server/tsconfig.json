@@ -3,9 +3,9 @@
     "rootDir": "src",
     "outDir": "dist",
     "target": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
-    "module": "commonjs"
+    "module": "ES6"
   },
   "include": ["src"]
 }
