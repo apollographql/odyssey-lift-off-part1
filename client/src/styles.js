@@ -15,7 +15,7 @@ export const widths = {
 export const colors = {
   primary: SKColors.indigo.base,
   secondary: SKColors.teal.base,
-  accent: SKColors.pink.base,
+  accent: SKColors.blue.base,
   background: SKColors.silver.light,
   text: SKColors.black.base,
   textSecondary: SKColors.grey.dark,

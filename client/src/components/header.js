@@ -19,8 +19,8 @@ const Header = ({ children }) => {
                 <Logo src={logo} />
               </LogoContainer>
               <Title>
-                <h3>Catstronaut</h3>
-                <div>Kitty space academy</div>
+                <h3>The Cataldi Guild</h3>
+                <div>a merchant family of The Ape Society</div>
               </Title>
             </HomeButton>
           </HomeLink>
@@ -39,7 +39,7 @@ const HeaderBar = styled.div({
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'center',
-  borderBottom: `solid 1px ${colors.pink.light}`,
+  borderBottom: `solid 1px ${colors.blue.light}`,
   boxShadow: '0px 1px 5px 0px rgba(0,0,0,0.15)',
   padding: '5px 30px',
   minHeight: 80,
@@ -65,7 +65,7 @@ const HomeButton = styled.div({
   color: colors.accent,
   alignItems: 'center',
   ':hover': {
-    color: colors.pink.dark,
+    color: colors.blue.dark,
   },
 });
 
