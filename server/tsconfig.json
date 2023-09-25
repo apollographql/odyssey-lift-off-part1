@@ -1,11 +1,15 @@
 {
+  "type": "module",
   "compilerOptions": {
-    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "rootDirs": ["src"],
     "outDir": "dist",
+    "lib": ["es2020"],
     "target": "es2020",
+    "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "module": "commonjs"
-  },
-  "include": ["src"]
+    "types": ["node"]
+  }
 }
