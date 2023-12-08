@@ -36,12 +36,12 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@vitejs/plugin-react": "^4.0.1",
-    "@vitest/ui": "^0.33.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/ui": "^0.34.0",
     "happy-dom": "^9.20.3",
     "jest": "^27.5.1",
     "vite": "^4.4.2",
-    "vitest": "^0.33.0"
+    "vitest": "^0.34.0"
   },
   "overrides": {
     "nth-check": "2.1.1"
