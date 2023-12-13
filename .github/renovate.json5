@@ -32,6 +32,7 @@
     {
       matchPackagePatterns: ["*"],
       automerge: false,
+      "rangeStrategy": "replace"
     },
     // Example of pinning a dependency to a specific version or range of versions
     // There's a ton of flexibility for doing this type of thing
