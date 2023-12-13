@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.0",
-    "nodemon": "^3.0.0"
+    "nodemon": "^3.0.1"
   },
   "author": "Raphael Terrier @R4ph-t",
   "license": "MIT",
