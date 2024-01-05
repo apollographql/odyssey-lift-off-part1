@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { colors, ApolloIcon } from '../styles';
 
+
 /**
  * Footer is useless component to make our app look a little closer to a real website!
  */
