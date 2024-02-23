@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.6.0",
-    "nodemon": "^2.0.20",
+    "nodemon": "^3.1.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.3"
   },
