@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 
-export const defTypes = gql`
+export const typeDefs = gql`
     type Query {
         "Get Tracks array for Homepage grid "
         tracksForHome: [Track!]!
