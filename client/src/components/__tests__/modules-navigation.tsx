@@ -23,6 +23,7 @@ const mockParentTrack = {
   modulesCount: 10,
   numberOfViews: 51,
   author: {
+    id: 'cat-1',
     name: 'Henri, le Chat Noir',
     photo:
       'https://images.unsplash.com/photo-1442291928580-fb5d0856a8f1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzA0OH0',

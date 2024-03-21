@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { PropsWithChildren} from 'react';
 import styled from '@emotion/styled';
 import { LoadingSpinner } from '@apollo/space-kit/Loaders/LoadingSpinner';
+import { ApolloError } from '@apollo/client'
+
+
+interface QueryResultProps {
+  loading: boolean;
+  error?: ApolloError | undefined;
+  data?: unknown,
+}
 
 /**
  * Query Results conditionally renders Apollo useQuery hooks states:
  * loading, error or its children when data is ready
  */
-const QueryResult = ({ loading, error, data, children }) => {
+const QueryResult: React.FC<PropsWithChildren<QueryResultProps>> = ({ loading, error, data, children }): React.ReactElement<any, any> | null => {
   if (error) {
     return <p>ERROR: {error.message}</p>;
   }
@@ -17,12 +25,12 @@ const QueryResult = ({ loading, error, data, children }) => {
       </SpinnerContainer>
     );
   }
-  if (!data) {
-    return <p>Nothing to show...</p>;
-  }
   if (data) {
-    return children;
+    return <>{children}</>;
   }
+
+    return <p>Nothing to show...</p>;
+  
 };
 
 export default QueryResult;
