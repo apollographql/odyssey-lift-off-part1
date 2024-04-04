@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
 import fs from 'fs/promises';
+import { defineConfig } from 'vite';
 
 /*
   This override allows us to use .js files instead of exclusively .jsx.

@@ -1,4 +1,4 @@
-import TrackCard from '...components/track-card';
+import TrackCard from "..components/track-card";
 import { gql } from '@apollo/client';
 import React from 'react';
 import { Layout } from '../components';
