@@ -1,13 +1,20 @@
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import React from 'react';
-import { createRoot } from 'react-dom/client'
-import GlobalStyles from './styles';
+import ReactDOM from "react-dom";
 import Pages from './pages';
+import GlobalStyles from './styles';
 
-const root = createRoot(document.getElementById('root'));
+const client = new ApolloClient({
+  uri: 'http://localhost:4000',
+  cache: new InMemoryCache(),
+})
 
-root.render(
-  <React.StrictMode>
+//const root = createRoot(document.getElementById('root'));
+
+ReactDOM.render(
+  <ApolloProvider client={client}>
     <GlobalStyles />
     <Pages />
-  </React.StrictMode>
+  </ApolloProvider>,
+  document.getElementById("root")
 );
