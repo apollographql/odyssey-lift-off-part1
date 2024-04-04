@@ -1,5 +1,6 @@
 const gql = require("graphql-tag");
 
+// Define our schema using the GraphQL schema language
 const typeDefs = gql`
   type Query {
     "Get tracks array for homepage grid"
