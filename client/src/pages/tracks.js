@@ -1,8 +1,8 @@
+import { gql, useQuery } from '@apollo/client';
 import React from 'react';
 import { Layout } from '../components';
-import { useQuery, gql } from '@apollo/client';
+import QueryResult from '../components/query-result';
 import TrackCard from '../containers/track-card';
-import { QueryResult } from '../components/query-result';
 
 
 
