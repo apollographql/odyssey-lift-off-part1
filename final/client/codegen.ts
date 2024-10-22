@@ -5,7 +5,7 @@ const config: CodegenConfig = {
   documents: ["src/**/*.tsx"],
   generates: {
     "./src/__generated__/": {
-      preset: 'client',
+      preset: "client",
       presetConfig: {
         gqlTagName: "gql"
       }
