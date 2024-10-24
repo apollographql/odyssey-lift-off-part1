@@ -6,7 +6,7 @@ You can [preview the completed demo app here](https://odyssey-catstronauts.netli
 
 ## How to use this repo
 
-The course will walk you step by step on how to implement the features you see in the demo app. This codebase is the starting point of your journey!
+The course will walk you step by step through how to implement the features you see in the demo app. This codebase is the starting point of your journey!
 
 There are 3 main folders:
 
