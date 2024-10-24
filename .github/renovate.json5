@@ -1,0 +1,26 @@
+{
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'group:allNonMajor',
+  ],
+  dependencyDashboard: false,
+  prCreation: 'immediate',
+  lockFileMaintenance: {
+    automerge: false,
+  },
+  packageRules: [
+    {
+      automerge: false,
+      rangeStrategy: 'replace',
+      matchPackageNames: [
+        '*',
+      ],
+    },
+    {
+      matchPackageNames: [
+        'react',
+      ],
+      allowedVersions: '16.x',
+    },
+  ],
+}
