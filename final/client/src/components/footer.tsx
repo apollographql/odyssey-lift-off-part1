@@ -8,7 +8,7 @@ import { colors, ApolloIcon } from '../styles';
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      2021 ©{' '}
+      {new Date().getFullYear()} ©{' '}
       <LogoContainer>
         <ApolloIcon width="100px" height="40px" />
       </LogoContainer>
