@@ -8,7 +8,7 @@ const mockTrack = {
     title: 'Cat-stronomy, an introduction',
     description: '# Pulchra vehi vidit misera sola armenta secabatur\n\n',
     thumbnail:
-      'https://res.cloudinary.com/dety84pbu/image/upload/v1598465568/nebula_cat_djkt9r.jpg',
+      'https://res.cloudinary.com/apollographql/image/upload/v1730818804/odyssey/lift-off-api/nebula_cat_djkt9r_nzifdj.jpg',
     length: 2377,
     modulesCount: 10,
     numberOfViews: 51,
