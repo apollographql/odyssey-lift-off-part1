@@ -1,5 +1,4 @@
 import React from 'react';
-import { ApolloError } from '@apollo/client';
 import { render, cleanup } from '../../utils/test-utils';
 import QueryResult from '../query-result';
 
@@ -19,7 +18,7 @@ describe('Query Result', () => {
   });
 
   it('renders Error', async () => {
-    const { getByText } = render(<QueryResult loading={false} error={new ApolloError({ errorMessage: 'you lose' })} />);
+    const { getByText } = render(<QueryResult loading={false} error={new Error('you lose')} />);
     getByText(/you lose/i);
   });
 });

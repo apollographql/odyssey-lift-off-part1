@@ -1,20 +1,27 @@
 import React, { ComponentProps } from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom'
-import '@testing-library/jest-dom/extend-expect';
-import { MockedProvider } from '@apollo/client/testing';
+import '@testing-library/jest-dom/vitest';
+import { MockedProvider } from '@apollo/client/testing/react';
+
+type RenderApolloOptions = {
+  mocks?: ComponentProps<typeof MockedProvider>['mocks'];
+  addTypename?: boolean;
+  defaultOptions?: ComponentProps<typeof MockedProvider>['defaultOptions'];
+  cache?: ComponentProps<typeof MockedProvider>['cache'];
+  resolvers?: any;
+  removeTypename?: boolean;
+} & Record<string, any>;
 
 const renderApollo = (
   node: React.ReactElement,
-  { mocks, addTypename, defaultOptions, cache, resolvers, ...options }: Pick<ComponentProps<typeof MockedProvider>, 'mocks' | 'addTypename' | 'defaultOptions' | 'cache' | 'resolvers'>
+  { mocks, addTypename, defaultOptions, cache, resolvers, removeTypename, ...options }: RenderApolloOptions = {}
 ) => {
   return render(
     <MockedProvider
       mocks={mocks}
-      addTypename={addTypename}
       defaultOptions={defaultOptions}
       cache={cache}
-      resolvers={resolvers}
     >
       {node}
     </MockedProvider>,
