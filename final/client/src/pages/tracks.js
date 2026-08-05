@@ -6,7 +6,7 @@ import { Layout, QueryResult } from '../components';
 
 /** TRACKS gql query to retrieve all tracks */
 const TRACKS = gql`
-  query getTracks {
+  query GetTracks {
     tracksForHome {
       id
       title
@@ -14,6 +14,7 @@ const TRACKS = gql`
       length
       modulesCount
       author {
+        id
         name
         photo
       }
