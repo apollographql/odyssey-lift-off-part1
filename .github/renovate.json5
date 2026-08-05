@@ -20,7 +20,7 @@
       matchPackageNames: [
         'react',
       ],
-      allowedVersions: '16.x',
+      allowedVersions: '18.x',
     },
   ],
 }

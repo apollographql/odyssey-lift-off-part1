@@ -2,7 +2,7 @@ import React from 'react';
 import {
   renderApolloWithRouter,
   cleanup,
-  waitForElement,
+  waitFor,
 } from '../../utils/test-utils';
 import TrackCard from '../track-card';
 
@@ -33,6 +33,6 @@ describe('Track Card', () => {
         addTypename: false,
       }
     );
-    await waitForElement(() => getByText(/cat-stronomy/i));
+    await waitFor(() => getByText(/cat-stronomy/i));
   });
 });

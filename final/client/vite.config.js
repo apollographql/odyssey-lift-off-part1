@@ -9,6 +9,7 @@ export default defineConfig(() => ({
   test: {
     globals: true,
     environment: 'happy-dom',
+    include: ['**/__tests__/**/*.{js,jsx,ts,tsx}', '**/*.{test,spec}.{js,jsx,ts,tsx}'],
   },
   server: {
     host: 'localhost',
