@@ -6,6 +6,9 @@
   "scripts": {
     "start": "nodemon src/index"
   },
+  "nodemonConfig": {
+    "ext": "js,graphql"
+  },
   "dependencies": {
     "@apollo/server": "^5.0.0",
     "@graphql-tools/mock": "^9.0.0",

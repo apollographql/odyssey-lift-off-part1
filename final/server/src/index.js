@@ -2,8 +2,15 @@ const { ApolloServer } = require('@apollo/server');
 const { startStandaloneServer } = require('@apollo/server/standalone');
 const { addMocksToSchema } = require('@graphql-tools/mock');
 const { makeExecutableSchema } = require('@graphql-tools/schema');
+const { readFileSync } = require('fs');
+const path = require('path');
+const gql = require('graphql-tag');
 
-const typeDefs = require('./schema');
+const typeDefs = gql(
+  readFileSync(path.resolve(__dirname, './schema.graphql'), {
+    encoding: 'utf-8',
+  })
+);
 
 const mocks = {
   Query: () => ({
