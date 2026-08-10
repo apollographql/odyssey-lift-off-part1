@@ -4,7 +4,7 @@
   "description": "back-end demo app for Apollo's lift-off course",
   "main": "src/index.js",
   "scripts": {
-    "compile": "tsc",
+    "compile": "tsc && cp src/schema.graphql dist/schema.graphql",
     "dev": "ts-node-dev --respawn ./src/index.ts",
     "start": "npm run compile && nodemon ./dist/index.js"
   },
