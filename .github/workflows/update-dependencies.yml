@@ -17,7 +17,7 @@ on:
   schedule:
     # Run every day at midnight UTC
     # Note: During peak load times, GitHub may delay this time
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   update_deps: # job name
@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - name: 'Check out branch'
+      - name: "Check out branch"
         run: |
           git branch --remotes
           echo "*********"
@@ -53,19 +53,19 @@ jobs:
             echo "Checking out a new branch: ${BRANCH_NAME}"
             git checkout -b $BRANCH_NAME
           fi
-      - name: 'Install dependencies'
+      - name: "Install dependencies"
         run: |
           cd client && npm i && cd ..
           cd server && npm i && cd ..
           cd final/client && npm i && cd ../..
           cd final/server && npm i && cd ../..
-      - name: 'Update dependencies'
+      - name: "Update dependencies"
         run: |
           cd client && npm update && cd ..
           cd server && npm update && cd ..
           cd final/client && npm update && cd ../..
           cd final/server && npm update && cd ../..
-      - name: 'Commit & push changes'
+      - name: "Commit & push changes"
         run: |
           git status
           echo "*********"
@@ -86,7 +86,7 @@ jobs:
             git push --set-upstream origin $BRANCH_NAME
             echo "Pushed changes to remote branch $BRANCH_NAME"
           fi
-      - name: 'Open pull request'
+      - name: "Open pull request"
         run: |
           git branch --remotes
           echo "*********"

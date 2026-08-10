@@ -1,7 +1,7 @@
-import React from 'react';
-import '@apollo/space-kit/reset.css';
-import { colors as SKColors } from '@apollo/space-kit/colors';
-import { Global } from '@emotion/core';
+import React from "react";
+import "@apollo/space-kit/reset.css";
+import { colors as SKColors } from "@apollo/space-kit/colors";
+import { Global } from "@emotion/core";
 
 const breakpoints = [480, 768, 992, 1200];
 export const mq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
@@ -25,8 +25,8 @@ export const colors = {
 const GlobalStyles = () => (
   <Global
     styles={{
-      [['html', 'body']]: {
-        height: '100%',
+      [["html", "body"]]: {
+        height: "100%",
       },
       body: {
         margin: 0,
@@ -35,16 +35,16 @@ const GlobalStyles = () => (
         backgroundColor: colors.background,
         color: colors.text,
       },
-      '#root': {
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100%',
+      "#root": {
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100%",
         backgroundImage: 'url("/space_kitty_pattern.png")',
       },
-      '*': {
-        boxSizing: 'border-box',
+      "*": {
+        boxSizing: "border-box",
       },
-      [['h1', 'h2', 'h3', 'h4', 'h5', 'h6']]: {
+      [["h1", "h2", "h3", "h4", "h5", "h6"]]: {
         margin: 0,
         fontWeight: 600,
       },
@@ -60,7 +60,7 @@ const GlobalStyles = () => (
       },
       h5: {
         fontSize: 16,
-        textTransform: 'uppercase',
+        textTransform: "uppercase",
         letterSpacing: 4,
       },
     }}
@@ -69,12 +69,12 @@ const GlobalStyles = () => (
 
 export default GlobalStyles;
 
-export { IconRun } from '@apollo/space-kit/icons/IconRun';
-export { IconView } from '@apollo/space-kit/icons/IconView';
-export { IconTime } from '@apollo/space-kit/icons/IconTime';
-export { IconBook } from '@apollo/space-kit/icons/IconBook';
-export { IconYoutube } from '@apollo/space-kit/icons/IconYoutube';
-export { IconArrowRight } from '@apollo/space-kit/icons/IconArrowRight';
-export { IconDoubleArrowRight } from '@apollo/space-kit/icons/IconDoubleArrowRight';
-export { ApolloIcon } from '@apollo/space-kit/icons/ApolloIcon';
-export { Button } from '@apollo/space-kit/Button';
+export { IconRun } from "@apollo/space-kit/icons/IconRun";
+export { IconView } from "@apollo/space-kit/icons/IconView";
+export { IconTime } from "@apollo/space-kit/icons/IconTime";
+export { IconBook } from "@apollo/space-kit/icons/IconBook";
+export { IconYoutube } from "@apollo/space-kit/icons/IconYoutube";
+export { IconArrowRight } from "@apollo/space-kit/icons/IconArrowRight";
+export { IconDoubleArrowRight } from "@apollo/space-kit/icons/IconDoubleArrowRight";
+export { ApolloIcon } from "@apollo/space-kit/icons/ApolloIcon";
+export { Button } from "@apollo/space-kit/Button";

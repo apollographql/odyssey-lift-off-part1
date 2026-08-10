@@ -1,12 +1,20 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom'
-import '@testing-library/jest-dom/vitest';
-import { MockedProvider } from '@apollo/client/testing/react';
+import React from "react";
+import { render } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
+import "@testing-library/jest-dom/vitest";
+import { MockedProvider } from "@apollo/client/testing/react";
 
 const renderApollo = (
   node,
-  { mocks, addTypename, defaultOptions, cache, resolvers, removeTypename, ...options } = {}
+  {
+    mocks,
+    addTypename,
+    defaultOptions,
+    cache,
+    resolvers,
+    removeTypename,
+    ...options
+  } = {},
 ) => {
   return render(
     <MockedProvider
@@ -17,17 +25,17 @@ const renderApollo = (
     >
       {node}
     </MockedProvider>,
-    options
+    options,
   );
 };
 
 export const renderWithRouterGenerator = (renderer) => (node, options) => {
-  return renderer(<BrowserRouter>{node}</BrowserRouter>, options)
-}
+  return renderer(<BrowserRouter>{node}</BrowserRouter>, options);
+};
 
-export const renderWithRouter = renderWithRouterGenerator(render)
+export const renderWithRouter = renderWithRouterGenerator(render);
 
-export const renderApolloWithRouter = renderWithRouterGenerator(renderApollo)
+export const renderApolloWithRouter = renderWithRouterGenerator(renderApollo);
 
-export * from '@testing-library/react';
+export * from "@testing-library/react";
 export { renderApollo };
