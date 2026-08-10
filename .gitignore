@@ -4,3 +4,4 @@ node_modules
 */**/dist
 */**/types.ts
 */**/__generated__
+dist

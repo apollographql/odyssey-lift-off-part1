@@ -9,7 +9,7 @@ import gql from "graphql-tag";
 const typeDefs = gql(
   readFileSync(path.resolve(__dirname, "./schema.graphql"), {
     encoding: "utf-8",
-  })
+  }),
 );
 
 const mocks = {

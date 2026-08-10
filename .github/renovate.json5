@@ -1,26 +1,20 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: [
-    'group:allNonMajor',
-  ],
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["group:allNonMajor"],
   dependencyDashboard: false,
-  prCreation: 'immediate',
+  prCreation: "immediate",
   lockFileMaintenance: {
     automerge: false,
   },
   packageRules: [
     {
       automerge: false,
-      rangeStrategy: 'replace',
-      matchPackageNames: [
-        '*',
-      ],
+      rangeStrategy: "replace",
+      matchPackageNames: ["*"],
     },
     {
-      matchPackageNames: [
-        'react',
-      ],
-      allowedVersions: '18.x',
+      matchPackageNames: ["react"],
+      allowedVersions: "18.x",
     },
   ],
 }

@@ -1,0 +1,15 @@
+{
+  "name": "odyssey-lift-off-part1",
+  "private": true,
+  "description": "Root tooling for formatting the Lift-off starter and final apps",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
