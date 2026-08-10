@@ -2,6 +2,7 @@ node_modules
 .DS_Store
 .env
 */**/dist
-*/**/types.ts
-*/**/__generated__
 dist
+
+# Learners regenerate codegen output locally; final/ ships committed types.
+/client/src/__generated__/
