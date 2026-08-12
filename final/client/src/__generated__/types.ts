@@ -31,7 +31,7 @@ export type Query = {
   tracksForHome: Array<Track>;
 };
 
-/** A group of modules that teaches about a specific topic */
+/** Educational modules teaching a specific topic */
 export type Track = {
   __typename?: 'Track';
   /** The track's primary author */
