@@ -3,7 +3,7 @@ type Query {
   tracksForHome: [Track!]!
 }
 
-"A group of modules that teaches about a specific topic"
+"Educational modules teaching a specific topic"
 type Track {
   "The unique identifier for the track"
   id: ID!
