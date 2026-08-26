@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { colors } from '../styles';
-import ReactMarkdown from 'react-markdown';
+import React from "react";
+import styled from "@emotion/styled";
+import { colors } from "../styles";
+import ReactMarkdown from "react-markdown";
 
 /**
  * Markdown component is a simple style wrapper for markdown content used across our app
@@ -17,13 +17,13 @@ const StyledMarkdown = styled(ReactMarkdown as any)({
   color: colors.grey.darker,
 
   h1: {
-    fontSize: '1.7em',
+    fontSize: "1.7em",
   },
   h2: {
-    fontSize: '1.4em',
+    fontSize: "1.4em",
   },
   h3: {
-    fontSize: '1.2em',
+    fontSize: "1.2em",
   },
   a: {
     color: colors.pink.base,
@@ -34,7 +34,7 @@ const StyledMarkdown = styled(ReactMarkdown as any)({
     border: `solid 1px ${colors.silver.dark}`,
     backgroundColor: colors.silver.base,
     code: {
-      fontSize: '0.9em',
+      fontSize: "0.9em",
     },
   },
 });

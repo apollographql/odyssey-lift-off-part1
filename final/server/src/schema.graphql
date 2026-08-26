@@ -1,0 +1,30 @@
+type Query {
+  "Fetch a list of tracks for the homepage grid"
+  tracksForHome: [Track!]!
+}
+
+"Educational modules teaching a specific topic"
+type Track {
+  "The unique identifier for the track"
+  id: ID!
+  "The title of the track"
+  title: String!
+  "The track's primary author"
+  author: Author!
+  "The URL of the track's illustration, used in the track card and track detail page"
+  thumbnail: String
+  "The track's approximate length to complete, in minutes"
+  length: Int
+  "The number of modules contained in this track"
+  modulesCount: Int
+}
+
+"An author of a track or module"
+type Author {
+  "The unique identifier for the author"
+  id: ID!
+  "The author's first and last name"
+  name: String!
+  "The URL of the author's profile picture"
+  photo: String
+}
