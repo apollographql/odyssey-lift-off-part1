@@ -4,18 +4,19 @@
   "private": true,
   "description": "front-end demo app for Apollo's lift-off course",
   "dependencies": {
-    "@apollo/client": "^3.7.16",
+    "@apollo/client": "^4.0.0",
     "@apollo/space-kit": "^9.3.1",
     "@emotion/cache": "^11.4.0",
     "@emotion/core": "^10.1.1",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
-    "graphql": "^16.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "graphql": "^16.11.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
     "react-player": "^2.14.1",
-    "react-router-dom": "^6.22.0"
+    "react-router-dom": "^7.18.2",
+    "rxjs": "^7.8.0"
   },
   "scripts": {
     "test": "vitest",
@@ -35,18 +36,18 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^14.5.1",
-    "@vitejs/plugin-react": "^4.0.1",
-    "@vitest/ui": "^0.34.0",
-    "happy-dom": "^12.1.2",
-    "jest": "^27.5.1",
-    "vite": "^4.4.2",
-    "vitest": "^0.34.0"
+    "@testing-library/jest-dom": "^6.6.0",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/ui": "^3.0.0",
+    "happy-dom": "^20.11.1",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
   },
   "overrides": {
-    "nth-check": "2.1.1"
+    "nth-check": "2.1.1",
+    "lodash": "4.18.1"
   },
   "main": "src/index.js",
   "author": "Raphael Terrier @R4ph-t",

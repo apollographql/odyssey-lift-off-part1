@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { colors, widths } from '../styles';
-import useWindowDimensions from '../utils/useWindowDimensions';
-import ContentSection from './content-section';
-import ReactPlayer from 'react-player/youtube';
-import ModulesNav from './modules-navigation';
-import MarkDown from './md-content';
+import React from "react";
+import styled from "@emotion/styled";
+import { colors, widths } from "../styles";
+import useWindowDimensions from "../utils/useWindowDimensions";
+import ContentSection from "./content-section";
+import ReactPlayer from "react-player/youtube";
+import ModulesNav from "./modules-navigation";
+import MarkDown from "./md-content";
 
 /**
  * Module Detail renders content of a given module:
@@ -37,18 +37,18 @@ export default ModuleDetail;
 
 /** Module Detail styled components */
 const TopSection = styled.div({
-  display: 'flex',
-  justifyContent: 'center',
+  display: "flex",
+  justifyContent: "center",
   backgroundColor: colors.black.base,
   padding: 20,
   borderBottom: `solid 1px ${colors.pink.base}`,
 });
 
 const TopContainer = styled.div(({ totalWidth }) => ({
-  display: 'flex',
-  flexDirection: 'row',
-  alignSelf: 'center',
-  width: '100%',
+  display: "flex",
+  flexDirection: "row",
+  alignSelf: "center",
+  width: "100%",
   maxWidth: widths.largePageWidth,
   // 60 below removes 3 * 20 horizontal paddings (sides and inner between player and list)
   height: ((totalWidth - 60) * (2 / 3)) / (16 / 9),
@@ -56,7 +56,7 @@ const TopContainer = styled.div(({ totalWidth }) => ({
 }));
 
 const PlayerContainer = styled.div({
-  width: '66%',
+  width: "66%",
 });
 
 const ModuleTitle = styled.h1({
