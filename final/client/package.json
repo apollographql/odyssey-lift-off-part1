@@ -13,7 +13,7 @@
     "graphql": "^16.11.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-markdown": "^9.0.1",
+    "react-markdown": "^10.0.0",
     "react-player": "^2.14.1",
     "react-router-dom": "^7.18.2",
     "rxjs": "^7.8.0"
